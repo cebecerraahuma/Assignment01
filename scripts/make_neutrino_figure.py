@@ -1,9 +1,11 @@
+import time
+start_time = time.perf_counter()
 from pathlib import Path
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-
+    
 PROJECT_ROOT = Path(__file__).resolve().parents[1] # This give us the path on the project root
 
 DATA_PATH       = PROJECT_ROOT/"data"/"raw"/"neutrino_data.csv"
@@ -81,8 +83,6 @@ def main():
     # Final figure
     fig, ax = plt.subplots(figsize=(7, 4))
 
-    # TODO: Draw the ratio points from ratio_table and your survival-probability curve on ax.
-
     # Data
     ax.errorbar(
         ratio_table["energy_center_GeV"],
@@ -102,12 +102,15 @@ def main():
     # Save the figure into the repository so it can be committed.
     FIGURE_DIR  = PROJECT_ROOT/"figures"
     FIGURE_PATH = FIGURE_DIR/"neutrino_data_simulation_ratio.png"
-    # Save the figure to FIGURE_PATH with good resolution.
+    # Save the figure to FIGURE_PATH.
     plt.savefig(FIGURE_PATH,dpi=650)
-    # plt.show()
+    # plt.show()  # When this line is active, the plot opens in a separate window.
     print(f"Saved figure to: {FIGURE_PATH}")
 
 
 if __name__ == "__main__":
     main()
+    end_time = time.perf_counter()
+    execution_time = end_time - start_time
+    print(f"Execution time: {execution_time:.3f} seconds")
     print('Done!!!')
