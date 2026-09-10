@@ -4,6 +4,6 @@ __pycache__/
 *.pyc
 .DS_Store
 .env
-
+venv_assignment01/
 # Local instructor-only material should never be pushed to the student template.
 _instructor_only/
