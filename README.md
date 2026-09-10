@@ -81,7 +81,7 @@ The analysis uses two CSV files:
 - `data/raw/neutrino_data.csv`: observed neutrino energies.
 - `data/raw/neutrino_simulation.csv`: simulated neutrino energies.
 
-The energies are given in GeV.
+The energies are given in GeV. When the histogram is created, we're using 20 bins because our energy range goes from 0 to 20 GeV, this means that each bin representing a 1 GeV interval.
 
 ## Software
 
