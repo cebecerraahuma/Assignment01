@@ -95,3 +95,9 @@ The exact package versions are listed in `requirements.txt`.
 
 The `requirements.txt` file was created using:
 - `python -m pip freeze` > requirements.txt
+
+## Running the script
+
+To run the Python script, use:
+
+- `python scripts/make_neutrino_figure.py`
